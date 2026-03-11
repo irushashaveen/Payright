@@ -39,7 +39,8 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        headless: false, // Use headed mode since headless shell is not installed
+        // Use headed mode locally (since headless shell missing), headless in CI
+        headless: process.env.CI ? true : false,
       },
     },
 
