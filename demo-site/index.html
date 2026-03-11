@@ -1,14 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Playwright Demo Site</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIIT GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id="title">My Assignment Demo</h1>
-  <input id="nameInput" placeholder="Enter your name">
-  <button id="helloBtn">Say Hello</button>
-  <p id="message"></p>
-  <script src="script.js"></script>
+    <div class="container">
+        <header>
+            <h1>🎓 SLIIT GPA Calculator</h1>
+            <p>Calculate your Cumulative Grade Point Average</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="calculator-section">
+                    <h2>Module Manager</h2>
+                    <button id="addModuleBtn" class="add-btn">➕ Add Module</button>
+                    
+                    <div id="moduleList" class="module-list"></div>
+                    
+                    <div class="summary">
+                        <h3>Summary</h3>
+                        <div class="summary-item">
+                            <span>Total Modules:</span>
+                            <span id="totalModules">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Total Credits:</span>
+                            <span id="totalCredits">0</span>
+                        </div>
+                        <div class="summary-item gpa-display">
+                            <span>Cumulative GPA:</span>
+                            <span id="cgpa">0.00</span>
+                        </div>
+                        <div id="gpaStatus" class="gpa-status"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <h2>Grading Scale</h2>
+                <table class="grading-table">
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Grade Point</th>
+                            <th>Mark Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A+</td><td>4.0</td><td>90-100</td></tr>
+                        <tr><td>A</td><td>4.0</td><td>80-89</td></tr>
+                        <tr><td>A-</td><td>3.7</td><td>75-79</td></tr>
+                        <tr><td>B+</td><td>3.3</td><td>70-74</td></tr>
+                        <tr><td>B</td><td>3.0</td><td>65-69</td></tr>
+                        <tr><td>B-</td><td>2.7</td><td>60-64</td></tr>
+                        <tr><td>C+</td><td>2.3</td><td>55-59</td></tr>
+                        <tr><td>C</td><td>2.0</td><td>45-54</td></tr>
+                        <tr><td>C-</td><td>1.7</td><td>40-44</td></tr>
+                        <tr><td>D+</td><td>1.3</td><td>35-39</td></tr>
+                        <tr><td>D</td><td>1.0</td><td>30-34</td></tr>
+                        <tr><td>E</td><td>0.0</td><td>0-29</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
