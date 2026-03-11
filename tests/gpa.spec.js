@@ -24,7 +24,7 @@ test('adding one module with A+ grade and 4 credits shows GPA 4.00 and Deans Lis
     
     // Fill in the first module
     await page.fill('input[type="number"]', '4');
-    await page.selectOption('select', 'A+');
+    await page.selectOption('select', 'B');
     
     // Verify GPA is 4.00
     const gpa = await page.locator('#cgpa').textContent();
