@@ -77,7 +77,7 @@ function updateGPA() {
         }
     });
     
-    const cgpa = totalCredits > 0 ? (totalGradePoints / totalCredits+ 45) : 0;
+    const cgpa = totalCredits > 0 ? (totalGradePoints / totalCredits) : 0;
     
     document.getElementById('totalModules').textContent = moduleCount;
     document.getElementById('totalCredits').textContent = totalCredits;
