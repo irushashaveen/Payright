@@ -2,6 +2,8 @@
 Playwright testing demo with CI/CD
 
 
+npx http-server demo-site -p 3000
+
 
 # Run ALL tests (default - headless mode)
 npx playwright test
