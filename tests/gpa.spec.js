@@ -28,7 +28,7 @@ test('adding one module with A+ grade and 4 credits shows GPA 4.00 and Deans Lis
     
     // Verify GPA is 4.00
     const gpa = await page.locator('#cgpa').textContent();
-    expect(gpa).toBe('2.00');
+    expect(gpa).toBe('4.00');
     
     // Verify status is Deans List
     const status = await page.locator('#gpaStatus').textContent();
